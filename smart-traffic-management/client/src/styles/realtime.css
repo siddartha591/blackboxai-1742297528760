@@ -1,0 +1,197 @@
+/* Real-time components styling */
+
+/* Traffic Map Container */
+.traffic-map-container {
+  height: 100%;
+  min-height: 500px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.traffic-map {
+  height: 100%;
+  width: 100%;
+}
+
+/* Custom Marker Icons */
+.custom-div-icon {
+  background: none;
+  border: none;
+}
+
+/* Stats Cards */
+.stat-card {
+  @apply bg-white p-6 rounded-lg shadow-sm transition-all duration-300;
+}
+
+.stat-card:hover {
+  @apply shadow-md transform -translate-y-1;
+}
+
+.stat-label {
+  @apply text-sm text-gray-500;
+}
+
+.stat-value {
+  @apply text-2xl font-bold;
+}
+
+/* Chart Container */
+.chart-container {
+  @apply bg-white p-6 rounded-lg shadow-sm;
+  height: 400px;
+}
+
+/* Incident List */
+.incident-item {
+  @apply bg-white p-4 rounded-lg shadow-sm border-l-4 mb-4 transition-all duration-300;
+}
+
+.incident-item:hover {
+  @apply shadow-md transform -translate-x-1;
+}
+
+.incident-item.high {
+  @apply border-red-500;
+}
+
+.incident-item.medium {
+  @apply border-yellow-500;
+}
+
+.incident-item.low {
+  @apply border-green-500;
+}
+
+/* Status Indicators */
+.status-indicator {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.status-indicator.active {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-indicator.warning {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-indicator.error {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Quick Action Buttons */
+.quick-action {
+  @apply p-4 rounded-lg text-left transition-all duration-300;
+}
+
+.quick-action:hover {
+  @apply transform -translate-y-1 shadow-md;
+}
+
+.quick-action.primary {
+  @apply bg-blue-50 hover:bg-blue-100;
+}
+
+.quick-action.danger {
+  @apply bg-red-50 hover:bg-red-100;
+}
+
+.quick-action.success {
+  @apply bg-green-50 hover:bg-green-100;
+}
+
+.quick-action.info {
+  @apply bg-purple-50 hover:bg-purple-100;
+}
+
+/* Loading States */
+.loading-spinner {
+  @apply animate-spin rounded-full border-4 border-gray-200;
+  border-top-color: #3B82F6;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.loading-container {
+  @apply flex items-center justify-center p-8;
+}
+
+/* Connection Status */
+.connection-status {
+  @apply text-sm p-2 rounded-md flex items-center;
+}
+
+.connection-status.connected {
+  @apply bg-green-100 text-green-800;
+}
+
+.connection-status.disconnected {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.connection-status.error {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .traffic-map-container {
+    min-height: 300px;
+  }
+
+  .chart-container {
+    height: 300px;
+  }
+
+  .stat-card {
+    @apply p-4;
+  }
+
+  .quick-action {
+    @apply p-3;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Utility Classes */
+.truncate-2-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
